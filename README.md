@@ -81,6 +81,7 @@ textarea{
  
 
 </style>
+</head>
 <body>
 	
 	<p><a href="https://yazan225.github.io/">Visit my old page !</a></p>
