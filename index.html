@@ -92,109 +92,91 @@ textarea{
 <p><a href="https://yazan225.github.io/">Visit my old page !</a></p>
 
 	
+    <label for="subject">Subject *</label>
     
-  <label onsubmit="checkInputIsText()" for="Subject">Subject *</label><br>
-  
-  <input type="text" id="Subject" name="Subject" ><br>
- 
-  <label for="Email">Email *</label><br> 
-  
-  <input type="email" id="Email" name="Email"><br>
-  
-  <label for="ID">ID * </label><br> 
-  
-  <input type="number" id="ID" name="ID"><br>
-  
-  <label for="URL">URL * </label><br> 
-  
-  <input type="url" id="URL" name="URL"  ><br>
-  
-  <label for="message">  Message * </label><br>
-   
-  <textarea id="message" name="message" style="width:800px; height:200px;" > </textarea>
-  
-  <input type="submit" value="Submit" onclick="return validateForm();">
-  
+    <input type="text" id="Subject" name="subject"  >
 
-
-<footer>
-  <p>@Copy Right 2020</p>
-</footer>
-	
-	      
-	   <script>  
-	  
-	  function validateForm() {
-   var a1;
-   var a2;
-   var a3;
-   var a4;
-   var a5;
-   
-  if ( document.getElementById("Subject").value == "") {
-	alert("subject must be filled out");
-	a1=false;
-	}
-	  if (document.getElementById("Email").value) {
-	alert("Email must be filled out");
-	a2=false;
-	}
-	  if (document.getElementById("ID").value) {
-	alert("ID must be filled out");
-	a3=false;
-	}
-	  if (document.getElementById("URL").value) {
-	alert("URL must be filled out");
-	a4=false;
-	}
-	  if (document.getElementById("Message").value) {
-	alert("message must be filled out");
-	a5=false;
-	}
-	
-	
-    return x;
-
-   var valid;
-   valid = true;
-      if (!isNaN(document.myForm.Subject.value)){
-         alert("Please Provide subject as a text");
-		 valid=false;
-      }
-	  return valid;
-
+     <label for="Email">Email *</label>
      
-   var valid;
-   valid = true;
-      if (!isNaN(document.myForm.message.value)){
-         alert("Please Provide message as a text");
-		 valid=false;
-      }
-	  return valid;
+     <input type="text" id="Email" name="Email">
 
-   var valid;
-   valid = true;
-      if (isNaN(document.myForm.ID.value)){
-         alert("Please Provide id as a number");
-		 valid=false;
-      }
-	  return valid;
-  
+     <label for="id">ID *</label>
+     
+     <input type="text" id="ID" name="id">
+
+     <label for="URL">URL *</label>
+     
+     <input type="text" id="URL" name="URL">
+
+     <label for="Message">Message *</label>
+     
+     <textarea name="message" id="Message"></textarea>
+
+     <input type="submit" value="Submit" onclick="return validateForm();" >
+     
+<script>
+
+function validateForm() {
+
+  var a1 = document.getElementById("Subject").value;
+  var a2 = document.getElementById("Email").value;
+  var a3 = document.getElementById("ID").value;
+  var a4 = document.getElementById("URL").value;
+  var a5 = document.getElementById("Message").value;
+
+   if (a1 == "") 
+   alert("please fill the subject feild ! ");
    
-   var str[]=document.myForm.Email.value;
-   var i,x=str.lastIndexOf("@");
-   for(i=x;i<str.length;i++){
-   document.write(str[i]);
-      }
-  
-
-      if (document.form.message.value == " ") {
-        alert("please fill it! ");
-      }
-      return;
+   if (a2 == "") {
+       var F1 = "empty" ;
+      alert("please fill the email feild !");
     }
+    
+   if (a3 == "") 
+   alert("please fill the id feild !");
+   
+   if (a4 == "")  {
+ var F2 = "empty" ;
+     alert("please fill the url feild !");
+}
+
+   if (a5 == "") 
+   alert("please fill the message feild !");
+   
+/*
+
+var z1 = document.getElementById("Subject").value;
+  var z2 = document.getElementById("Email").value;
+  var z3 = document.getElementById("ID").value;
+  var z4 = document.getElementById("URL").value;
+  var z5 = document.getElementById("Message").value;
   
-  </script>  
+      if (!isNaN(z1)){
+         alert("Please Provide subject as a text");
+      }
+
+      if (!isNaN(z5)){
+         alert("Please Provide message as a text");
+		 
+      }
+	  
+      if (isNaN(z3)){
+         alert("Please Provide id as a number");
+      }
+	 
+ 
+   var str[]=z2;
+   var i,x=str.lastIndexOf("@");
+   for(i=x;i<str.length;i++)
+   document.write(str[i]);
+      
+  
+*/
+}
+
+</script>
+
+
+<footer class="C1">@ copy Right 2020</footer>
 
 </body>
-</html>
