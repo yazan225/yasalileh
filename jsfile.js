@@ -1,83 +1,58 @@
-      
-	  
-	  
-	  function validateForm() {
-   var x;
-   x=true;
-  if (document.myForm.Subject.value == "") {
-	alert("subject must be filled out");
-	x=false;
-	}
-	  if (document.myForm.Email.value == "") {
-	alert("Email must be filled out");
-	x=false;
-	}
-	  if (document.myForm.ID.value == "") {
-	alert("ID must be filled out");
-	x=false;
-	}
-	  if (document.myForm.URL.value == "") {
-	alert("URL must be filled out");
-	x=false;
-	}
-	  if (document.myForm.message.value == "") {
-	alert("message must be filled out");
-	x=false;
-	}
-	
-	
-    return x;
+
+function validateForm() {
+
+  var a1 = document.getElementById("Subject").value;
+  var a2 = document.getElementById("Email").value;
+  var a3 = document.getElementById("ID").value;
+  var a4 = document.getElementById("URL").value;
+  var a5 = document.getElementById("Message").value;
+
+   if (a1 == "") 
+   alert("please fill the subject feild ! ");
+   
+   if (a2 == "") {
+       var F1 = "empty" ;
+      alert("please fill the email feild !");
+    }
+    
+   if (a3 == "") 
+   alert("please fill the id feild !");
+   
+   if (a4 == "")  {
+ var F2 = "empty" ;
+     alert("please fill the url feild !");
 }
 
-function checkInputIsText1(){
-   var valid;
-   valid = true;
-      if (!isNaN(document.myForm.Subject.value)){
+   if (a5 == "") 
+   alert("please fill the message feild !");
+   
+/*
+
+var z1 = document.getElementById("Subject").value;
+  var z2 = document.getElementById("Email").value;
+  var z3 = document.getElementById("ID").value;
+  var z4 = document.getElementById("URL").value;
+  var z5 = document.getElementById("Message").value;
+  
+      if (!isNaN(z1)){
          alert("Please Provide subject as a text");
-		 valid=false;
       }
-	  return valid;
-   }
-      function checkInputIsText2(){
-   var valid;
-   valid = true;
-      if (!isNaN(document.myForm.message.value)){
+
+      if (!isNaN(z5)){
          alert("Please Provide message as a text");
-		 valid=false;
+		 
       }
-	  return valid;
-   }
-
-     function checkInputIsNumber(){
-   var valid;
-   valid = true;
-      if (isNaN(document.myForm.ID.value)){
+	  
+      if (isNaN(z3)){
          alert("Please Provide id as a number");
-		 valid=false;
       }
-	  return valid;
-   }
-   
-   
-   function ExtractDomainName (){
-   
-   var str[]=document.myForm.Email.value;
+	 
+ 
+   var str[]=z2;
    var i,x=str.lastIndexOf("@");
-   for(i=x;i<str.length;i++){
+   for(i=x;i<str.length;i++)
    document.write(str[i]);
-      }
-   }
-
-
-  function IsEmpty() {
-
-      if (document.form.question.value == " ") {
-        alert("please fill it! ");
-      }
-      return;
-    }
+      
   
-
-  
-  
-  
+*/
+}
