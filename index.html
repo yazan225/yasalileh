@@ -19,21 +19,18 @@ header {
   width: 100%;
 }
 
-form{
-  padding: 4px;
-  font-size: 18px;
-  margin : 1% 10%;
-}
+
 
 input{
     width: 100%;
     border-style: solid;
     border-color: rgb(0, 200, 255);
-    padding: 10px;
-    margin : 0% 0%;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    padding: 4px;
+  font-size: 18px;
+  margin : 1% 10%;
 }
 
 
@@ -65,18 +62,22 @@ textarea{
 
     border-style: solid;
     border-color: rgb(0, 200, 255);
-    padding: 5px;
 	width: 100%;
 	height: auto;
+    padding: 4px;
+  font-size: 18px;
+  margin : 1% 10%;
  }
  
  label{
    width: 100%;
    border-color: rgb(112, 200, 255);
-   padding: 4px;
    height: auto;
    width: 230px;
    text-align: center;
+   padding: 4px;
+  font-size: 18px;
+  margin : 1% 10%;
  }
  
 
@@ -91,7 +92,6 @@ textarea{
 <p><a href="https://yazan225.github.io/">Visit my old page !</a></p>
 
 	
- <form name="myForm" method="post" onsubmit="return validateForm()">
     
   <label onsubmit="checkInputIsText()" for="Subject">Subject *</label><br>
   
@@ -113,40 +113,43 @@ textarea{
    
   <textarea id="message" name="message" style="width:500px; height:200px;" > </textarea>
   
-  <input type="submit" value="Submit">
+  <input type="submit" value="Submit" onclick="return validateForm();">
   
- </form>
+
 
 <footer>
-  <h2>@Copy Right 2020</h2>
+  <p>@Copy Right 2020</p>
 </footer>
 	
 	      
 	   <script>  
 	  
-  
 	  function validateForm() {
-   var x;
-   x=true;
-  if (document.myForm.Subject.value == "") {
+   var a1;
+   var a2;
+   var a3;
+   var a4;
+   var a5;
+   
+  if ( document.getElementById("Subject").value == "") {
 	alert("subject must be filled out");
-	x=false;
+	a1=false;
 	}
-	  if (document.myForm.Email.value == "") {
+	  if (document.getElementById("Email").value) {
 	alert("Email must be filled out");
-	x=false;
+	a2=false;
 	}
-	  if (document.myForm.ID.value == "") {
+	  if (document.getElementById("ID").value) {
 	alert("ID must be filled out");
-	x=false;
+	a3=false;
 	}
-	  if (document.myForm.URL.value == "") {
+	  if (document.getElementById("URL").value) {
 	alert("URL must be filled out");
-	x=false;
+	a4=false;
 	}
-	  if (document.myForm.message.value == "") {
+	  if (document.getElementById("Message").value) {
 	alert("message must be filled out");
-	x=false;
+	a5=false;
 	}
 	
 	
