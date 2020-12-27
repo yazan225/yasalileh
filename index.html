@@ -86,7 +86,7 @@ textarea{
 	</head>
 <body>
 		
-<header class="C1"> Contact Me </header>
+<header> Contact Me </header>
 	
 <p><a href="https://yazan225.github.io/">Visit my old page !</a></p>
 
@@ -117,7 +117,7 @@ textarea{
 
 function validateForm() {
 
-  var n=2;
+
   var a1 = document.getElementById("Subject").value;
   var a2 = document.getElementById("Email").value;
   var a3 = document.getElementById("ID").value;
@@ -141,8 +141,7 @@ function validateForm() {
      alert("The URL field is empty!");
 }
 
-   if (a5 == "") 
-   alert("The Message field is empty!");
+   if (a5 == "")  alert("The Message field is empty!");
    
    
      var a6 = a1.toString();
@@ -165,7 +164,7 @@ var sum1=0;
 var sum2=0;
 var sum3=0;
 
-for (i = 0 ; i< l1 ;  i++){
+for (i = 0 ; i< as1 ;  i++){
    if (a6[i]==0 || a6[i]==1 ||a6[i]==2 || a6[i]==3 ||a6[i]==4 ||a6[i]==5 ||a6[i]==6 ||a6[i]==7 ||a6[i]==8 ||a6[i]==9 ){
 
      sum1 = sum1 +1;
@@ -174,10 +173,10 @@ for (i = 0 ; i< l1 ;  i++){
  
    if (sum1 >0  ) 
    {
-   alert ("Subject field is NOT a string, please enter a valid string");
+   alert ("please enter Subject field as a string");
    }
 
-   for (i = 0 ; i< l5 ;  i++){
+   for (i = 0 ; i< as5 ;  i++){
       if (a10[i]==0 || a10[i]==1 ||a10[i]==2 ||a10[i]==3 ||a10[i]==4 ||a10[i]==5 ||a10[i]==6 ||a10[i]==7 ||a10[i]==8 ||a10[i]==9 ){
 
         sum2 = sum2 +1;
@@ -186,37 +185,37 @@ for (i = 0 ; i< l1 ;  i++){
 	
       if (sum2 >0  )
       {
-      alert ("please enter Message field as string");
+      alert ("please enter Message field as a string");
       }
 
 
-for (i =0 ; i<l3 ; i++){
+for (i =0 ; i<as3 ; i++){
    if ( a8[i] !=0 && a8[i]!=1 && a8[i]!=2 && a8[i]!=3 && a8[i]!=4 && a8[i]!=5 && a8[i]!=6 && a8[i]!=7 && a8[i]!=8 && a8[i]!=9 && a3 != "") {
      sum3 = sum3 +1 ;
    }
 }
 
 if (sum3 > 0){
-     alert ("please enter ID field as number");
+     alert ("please enter ID field as a Number");
    }
 
 
-var index = a7.search("@");
-var email = a7.slice(index, l2);
+var pos = a7.search("@");
+var EMAIL = a7.slice(pos, l2);
 
 if (F1!="empty"){
-alert(email);
+alert(EMAIL);
 }
-   var usernm = l4-10
-   var username = a9.slice(0, usernm);
+   var US = l4-10
+   var USERNAME = a9.slice(0, US);
    if (F2!="empty"){
-     alert( username );
+     alert( USERNAME);
 }
 }
 
 </script>
 
 
-<footer class="C1">@ copy Right 2020</footer>
+<footer>@ copy Right 2020</footer>
 
 </body>
